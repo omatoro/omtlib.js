@@ -32,7 +32,7 @@
         	return false;
         },
 
-        get: function () {
+        is: function () {
             return (this.limit < this.count) ? true : false;
         },
 
