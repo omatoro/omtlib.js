@@ -23,7 +23,7 @@
         },
 
         update : function () {
-        	if (this.limit < this.count) {
+        	if (this.limit <= this.count) {
                 this.count = this.limit;
         		return true;
         	}
