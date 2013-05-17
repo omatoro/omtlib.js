@@ -24,12 +24,17 @@
 
         update : function () {
         	if (this.limit < this.count) {
+                this.count = this.limit;
         		return true;
         	}
         	++this.count;
 
         	return false;
         },
+
+        is: function () {
+            return (this.limit < this.count) ? true : false;
+        }
 
         toggle : function () {
             if (this.update()) {
