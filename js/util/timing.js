@@ -48,6 +48,10 @@
             }
         },
 
+        resetLimit: function (limit) {
+            this.limit = limit || this.limit;
+        },
+
         reset : function (limit) {
             this.limit = limit || this.limit;
         	this.count = 0;
