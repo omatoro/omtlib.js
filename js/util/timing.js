@@ -33,7 +33,7 @@
         },
 
         is: function () {
-            return (this.limit < this.count) ? true : false;
+            return (this.limit <= this.count) ? true : false;
         },
 
         toggle : function () {
