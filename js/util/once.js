@@ -15,7 +15,9 @@
 (function(ns) {
 
     ns.Once = tm.createClass({
-        once_flag : true,
+        init: function () {
+            this.once_flag = true;
+        },
 
         run : function (flag, func) {
             if (flag           === true
@@ -39,7 +41,15 @@
                 func.apply(funcThis, temp_arguments);
                 this.once_flag = false;
             }
-        }
+        },
+
+        get: function (flag) {
+            var result = this.once_flag;
+            if (flag) {
+                this.once_flag = false;
+            }
+            return this.once_flag;
+        },
     });
 
 })(game);
